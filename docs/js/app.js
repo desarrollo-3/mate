@@ -1,10 +1,42 @@
-totalFrames = 152; // the number of images in the sequence of JPEG files (this could be calculated server-side by scanning the frames folder)
+var headerContentTop = "#header-content-top";
+var headerContentBottom = "#header-content-bottom";
+
+// Animacion de el header
+totalFrames = 152;
 
 $(document).ready(function() {
-    resizeAdjustments(); // adjust the size of video placeholder image to fit the screen and keep aspect ratio (zoom crop)
+    resizeAdjustments();
 });
 
-for(i = 1; i <= totalFrames; i++) { // loop for each image in sequence
-    images[i] =  new Image(); // add image object to array
-    images[i].src = "./assets/service2"+pad(i, 3)+".jpg"; // set the source of the image object
+for(var i = 1; i <= totalFrames; i++) {
+    images[i] =  new Image();
+    images[i].src = "./assets/service2"+pad(i, 3)+".jpg";
 }
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(headerContentTop, {
+    scrollTrigger: {
+        start: "100px top",
+        end: "+=500 top",
+        scrub: true,
+        markers: true
+    },
+    y: -50,
+    opacity: 0,
+    ease: "none",
+    duration: 3
+});
+
+gsap.to(headerContentBottom, {
+    scrollTrigger: {
+        start: "4000px top",
+        end: "+=500 top",
+        scrub: true,
+        markers: true
+    },
+    y: 50,
+    opacity: 1,
+    ease: "none",
+    duration: 3
+});

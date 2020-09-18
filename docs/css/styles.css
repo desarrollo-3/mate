@@ -12,25 +12,32 @@
 
 #header .header-content {
     position: absolute;
-    height: 100vh;
-    width: 100%;
+    width: 90%;
+    height: 400px;
+    left: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
+
+#header .header-content.hc-top {
+    top:100px;
+}
+
+#header .header-content.hc-bottom {
+    top:50px;
+}
+
 
 #header-content-bottom {
     opacity: 0;
-}
-
-#header-background {
-    
 }
 
 .section {
     width: 100%;
     height: 640px;
     position: relative;
-    top: 5500px;
+    top: 6000px;
 }
