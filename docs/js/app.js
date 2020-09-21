@@ -25,7 +25,7 @@ gsap.to(headerContentTop, {
     y: -50,
     opacity: 0,
     ease: "none",
-    duration: 3
+    duration: 5
 });
 
 gsap.to(headerContentBottom, {
@@ -35,8 +35,8 @@ gsap.to(headerContentBottom, {
         scrub: true,
         markers: true
     },
-    y: 50,
+    y: -50,
     opacity: 1,
     ease: "none",
-    duration: 3
+    duration: 5
 });

@@ -15,24 +15,19 @@
     width: 90%;
     height: 400px;
     left: 5%;
+    top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
-
-#header .header-content.hc-top {
-    top:100px;
-}
-
-#header .header-content.hc-bottom {
-    top:50px;
-}
-
 
 #header-content-bottom {
     opacity: 0;
+}
+
+#header .header-content .title {
+    font-weight: bold;
 }
 
 .section {
