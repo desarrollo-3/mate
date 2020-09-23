@@ -33,7 +33,11 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/lib/gsap.min.js",
+              "src/lib/ScrollTrigger.min.js",
+              "src/lib/video-scrubber.js",
+              "src/lib/app.js"
             ]
           },
           "configurations": {

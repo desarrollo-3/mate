@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100" id="site-menu">
+    <div class="container">
+        
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="usMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Nosotros
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="usMenu">
+                        <a class="dropdown-item" [routerLink]="['apaf']">¿Quienes somos?</a>
+                        <a class="dropdown-item" [routerLink]="['apaf']">Contacto</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="servicesMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Servicios
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicesMenu">
+                        <a class="dropdown-item" [routerLink]="['apaf']">APAF</a>
+                        <a class="dropdown-item" [routerLink]="['apaf']">AF</a>
+                        <a class="dropdown-item" [routerLink]="['apaf']">AL</a>
+                        <a class="dropdown-item" [routerLink]="['apaf']">AA</a>
+                        <a class="dropdown-item" [routerLink]="['apaf']">API</a>
+                    </div>
+                </li>
+            </ul>
+            <a class="navbar-brand mx-auto" [routerLink]="['home']">
+                <img src="assets/logo_mate_invertido.png" height="50" alt="" loading="lazy">
+            </a>
+            <a class="btn btn-outline-light">Iniciar sesión</a>
+        </div>
+    </div>
+</nav>
+

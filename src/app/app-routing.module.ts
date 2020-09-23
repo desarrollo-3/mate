@@ -8,18 +8,14 @@ import {Service3Component } from './pages/service3/service3.component';
 import {Service4Component } from './pages/service4/service4.component';
 import {Service5Component } from './pages/service5/service5.component';
 
-const routes: Routes = [
-  { path: 'inicio'                                          , component: HomeComponent },
+const APP_ROUTES: Routes = [
+  { path: 'inicio'  , component: HomeComponent },
   { path: 'apaf'    , component: Service1Component },
-  { path: 'af'                                 , component: Service2Component },
-  { path: 'al'                                , component: Service3Component },
-  { path: 'aa'                         , component: Service4Component },
-  { path: 'api'              , component: Service5Component },
-  { path: '**'      , redirectTo: 'inicio'}
+  { path: 'af'      , component: Service2Component },
+  { path: 'al'      , component: Service3Component },
+  { path: 'aa'      , component: Service4Component },
+  { path: 'api'     , component: Service5Component },
+  { path: '**'      , pathMatch: 'full', redirectTo: 'inicio'}
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES)
