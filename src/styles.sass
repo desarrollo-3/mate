@@ -1,39 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+$frames: 152
+$content-offset: ($frames*30)+1700px
+
+$font-size-title: 5rem
+$font-size-excerpt: 1rem
+
 *
     margin: 0
     padding: 0
 
 body
-    box-sizing: border-box
-    overflow-x: hidden
+    //box-sizing: border-box
+    //overflow-x: hidden
+
+#site-content
+  width: 100%
+  height: auto
 
 .service-header
-    overflow: hidden
-    height: 4560px //152 * 30
+  position: fixed
+  z-index: -1
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  .header-content
+    position: absolute
+    z-index: 2
     width: 100%
-    .header-content
-        position: fixed
-        z-index: 1
-        top: 0
-        left: 0
-        width: 100%
-        height: 100vh
-        display: flex
-        justify-content: center
-        align-items: center
-    .header-content.header-content-bottom
-        opacity: 0
-    .header-video
-        min-width: 100%
-        min-height: 100%
-        position: fixed
-        bottom: -10px
-        left: 0
-        z-index: -1
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-align: center
+    .title
+      font-size: $font-size-title
+      font-weight: bold
+      max-width: 65%
+      margin-bottom: 3rem
+    .excerpt
+      font-size: $font-size-excerpt
+      font-weight: 300
+      max-width: 50%
+  .header-content-bottom
+    opacity: 0
+    top: 100px
+  .header-background
+    position: absolute
+    z-index: 1
+    width: 100%
+    height: 100%
+    left: 0
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      width: 100%
+
 .service-content
-    width: 100%
-    min-height: 500px
-    position: relative
-    top: 4960px
-    left: 0px
-    z-index: 20
+  position: relative
+  top: $content-offset
+  .row.header
+    .head
+      font-size: 0.9rem
+    .title
+      font-size: 3rem
+      font-weight: 300
+      margin-bottom: 1rem
+    .excerpt
+      margin-left: auto
+      margin-right: auto
+      display: block
+      max-width: 50%
