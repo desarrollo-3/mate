@@ -1,0 +1,38 @@
+@import "node_modules/bootstrap/scss/bootstrap"
+
+$nav-home-border-radius: $border-radius !default
+$nav-home-link-active-color: #fff !default
+$nav-home-link-active-bg: rgba(255,255,255,0.2) !default
+
+.nav-home
+    .nav-link
+      @include border-radius($nav-home-border-radius)
+      color: rgba(255, 255, 255, 0.8)
+      font-weight: normal
+      mergin-right: 1rem
+      &:hover
+        color: rgba(255, 255, 255, 1)
+    .nav-link.active,
+    .show>.nav-link
+      color: $nav-home-link-active-color
+      background-color: $nav-home-link-active-bg
+
+
+#site-menu
+  position: absolute
+  z-index: 100
+  top: 50px
+  width: 100%
+  height: auto
+  background: yellow
+  padding-left: 1rem
+  padding-right: 1rem
+  .content
+    position: relative
+    width: inherit
+    height: inherit
+    .menu
+      position: absolute
+      display: flex
+      justify-content: space-between
+      width: inherit
