@@ -1,4 +1,6 @@
 $font-size-title: 4.5rem
+$service-item-size: 100px
+$transition-time: 300ms
 
 #home-header
   overflow: hidden
@@ -30,6 +32,9 @@ $font-size-title: 4.5rem
       margin: 0
   .header-content
     z-index: 3
+    padding-left: 5rem
+    padding-right: 5rem
+    width: 100%
     .title
       font-size: $font-size-title
       font-weight: bold
@@ -37,8 +42,49 @@ $font-size-title: 4.5rem
       margin-bottom: 3rem
   .img-fondo
     position: absolute
-    top: 0
+    bottom: -100px
     left: 0
     width: 100%
     height: auto
     z-index: 1
+
+.home-service
+  border-radius: 100px
+  overflow: hidden
+  height: $service-item-size
+  width: $service-item-size
+  display: flex
+  justify-content: center
+  align-items: center
+  position: absolute
+  z-index: 10
+  transition: all $transition-time linear
+  &:hover
+    width: $service-item-size*1.5
+    height: $service-item-size*1.5
+  .home-service-overlay
+    width: inherit
+    height: inherit
+    background: #fff
+    opacity: 1
+    position: absolute
+    z-index: 2
+    top: 0px
+    transition: opacity $transition-time linear
+    &:hover
+      opacity: 0
+.service-1
+  bottom: 100px
+  left: 250px
+.service-2
+  bottom: 135px
+  left: 640px
+.service-3
+  bottom: 300px
+  left: 850px
+.service-4
+  bottom: 300px
+  left: 1070px
+.service-5
+  bottom: 400px
+  left: 1200px

@@ -18,7 +18,7 @@ window.requestAnimFrame = (function() { // reduce CPU consumption, improve perfo
         window.oRequestAnimationFrame ||
         window.msRequestAnimationFrame ||
         function(callback) {
-            window.setTimeout(callback, 1000 / 30);
+            window.setTimeout(callback, 1000 / 60);
         };
 })();
 

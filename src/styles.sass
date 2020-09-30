@@ -2,7 +2,7 @@
 @import "node_modules/bootstrap/scss/bootstrap"
 
 $frames: 152
-$content-offset: ($frames*30)+1700px
+$content-offset: ($frames*30)+1000px
 
 $font-size-title: 5rem
 $font-size-excerpt: 1rem
@@ -61,18 +61,19 @@ body
     img
       width: 100%
 
-.service-content
+.service-container
   position: relative
   top: $content-offset
-  .row.header
-    .head
-      font-size: 0.9rem
-    .title
-      font-size: 3rem
-      font-weight: 300
-      margin-bottom: 1rem
-    .excerpt
-      margin-left: auto
-      margin-right: auto
-      display: block
-      max-width: 50%
+  .service-content
+    .row.header
+      .head
+        font-size: 0.9rem
+      .title
+        font-size: 3rem
+        font-weight: 300
+        margin-bottom: 1rem
+      .excerpt
+        margin-left: auto
+        margin-right: auto
+        display: block
+        max-width: 50%

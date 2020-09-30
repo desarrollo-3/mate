@@ -11,6 +11,7 @@ import { Service3Component } from './pages/service3/service3.component';
 import { Service4Component } from './pages/service4/service4.component';
 import { Service5Component } from './pages/service5/service5.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

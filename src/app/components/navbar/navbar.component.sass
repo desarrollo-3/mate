@@ -4,39 +4,75 @@ $nav-home-border-radius: $border-radius !default
 $nav-home-link-active-color: #fff !default
 $nav-home-link-active-bg: rgba(255,255,255,0.2) !default
 
+$nav-height: 60px
+$nav-height-mobile: 40px
+
 .nav-home
   .nav-link
     @include border-radius($nav-home-border-radius)
     color: rgba(255, 255, 255, 0.8)
     font-weight: normal
-    margin-right: 1rem
     &:hover
       color: rgba(255, 255, 255, 1)
   .nav-link.active,
   .show>.nav-link
     color: $nav-home-link-active-color
     background-color: $nav-home-link-active-bg
+  .nav-btn
+    padding: 0
+  .nav-slide
+    font-size: 18px
+    &:hover
+      background: $nav-home-link-active-bg
+
+.nav-left
+  .nav-link
+    margin-right: 1rem
+
+.nav-right
+  .nav-link
+    margin-left: 1rem
 
 #site-menu
   position: absolute
-  z-index: 100
   top: 50px
   width: 100%
-  height: auto
-  background: yellow
+  height: $nav-height-mobile
   padding-left: 1rem
   padding-right: 1rem
-  .content
-    position: relative
+  .menu
+    display: flex
+    justify-content: space-between
+    align-items: center
     width: inherit
     height: inherit
-    .menu
-      position: absolute
-      display: flex
-      justify-content: space-between
-      width: inherit
+    .nav
+      position: relative
+      z-index: 100
+  .logo
+    position: absolute
+    display: flex
+    justify-content: flex-end
+    width: inherit
+    z-index: 99
+    left: 0
+    padding-left: inherit
+    padding-right: inherit
+    .img-logo
+      height: $nav-height-mobile
+      margin-right: 1rem
+
 
 @include media-breakpoint-up(md)
   #site-menu
     padding-left: 5rem
     padding-right: 5rem
+
+@include media-breakpoint-up(sm)
+  #site-menu
+    height: $nav-height
+    .logo
+      justify-content: center
+      .img-logo
+        height: $nav-height
+        margin-right: 0

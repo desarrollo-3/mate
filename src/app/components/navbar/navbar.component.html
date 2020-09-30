@@ -1,29 +1,42 @@
 <nav id="site-menu">
-    <div class="content">
-        <div class="menu">
-            <ul class="nav nav-home">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </li>
-            </ul>
-            <button class="btn btn-outline-light" type="button">Iniciar sesión</button>
-        </div>
+    <div class="logo clearfix">
+        <a href="#">
+            <img src="assets/logo_mate_invertido.png" alt="logo" class="img-logo">
+        </a>
+    </div>
+    <div class="menu">
+        <ul class="nav nav-home nav-left d-flex d-md-none">
+            <li class="nav-item">
+                <a [routerLink]="['inicio']" class="nav-link nav-slide">
+                    <fa-icon [icon]="faBars"></fa-icon>
+                    <span class="ml-3">Menu</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav nav-home nav-left d-none d-md-flex">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Servicios</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" [routerLink]="['apaf']">Servicio</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="nav nav-home nav-right d-none d-sm-flex">
+            <li class="nav-item">
+                <a href="#" class="nav-link nav-btn">
+                    <button class="btn btn-outline-light" type="button">Iniciar sesión</button>
+                </a>
+            </li>
+        </ul>
     </div>
 </nav>
