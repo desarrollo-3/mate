@@ -5,18 +5,17 @@ $nav-home-link-active-color: #fff !default
 $nav-home-link-active-bg: rgba(255,255,255,0.2) !default
 
 .nav-home
-    .nav-link
-      @include border-radius($nav-home-border-radius)
-      color: rgba(255, 255, 255, 0.8)
-      font-weight: normal
-      mergin-right: 1rem
-      &:hover
-        color: rgba(255, 255, 255, 1)
-    .nav-link.active,
-    .show>.nav-link
-      color: $nav-home-link-active-color
-      background-color: $nav-home-link-active-bg
-
+  .nav-link
+    @include border-radius($nav-home-border-radius)
+    color: rgba(255, 255, 255, 0.8)
+    font-weight: normal
+    margin-right: 1rem
+    &:hover
+      color: rgba(255, 255, 255, 1)
+  .nav-link.active,
+  .show>.nav-link
+    color: $nav-home-link-active-color
+    background-color: $nav-home-link-active-bg
 
 #site-menu
   position: absolute
@@ -36,3 +35,8 @@ $nav-home-link-active-bg: rgba(255,255,255,0.2) !default
       display: flex
       justify-content: space-between
       width: inherit
+
+@include media-breakpoint-up(md)
+  #site-menu
+    padding-left: 5rem
+    padding-right: 5rem
