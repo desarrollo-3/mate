@@ -1,90 +1,71 @@
 $font-size-title: 4.5rem
-$service-item-size: 100px
+$service-circle-size: 48px
 $transition-time: 300ms
 
-#home-header
-  overflow: hidden
-  display: flex
-  justify-content: center
-  align-items: center
-  position: relative
-  width: 100%
-  height: 100vh
-  .header-video
-      width: 100%
-      height: 100vh
-      position: absolute
-      top: 0
-      left: 0
-      z-index: -1
-      overflow: hidden
-      video
-          min-width: 100%
-          min-height: 100%
-  .header-overlay
-      background: rgba(0, 0, 0, 0.2)
-      width: 100vw
-      height: 100vh
-      position: absolute
-      top: 0
-      left: 0
-      z-index: 0
-      margin: 0
-  .header-content
-    z-index: 3
-    padding-left: 5rem
-    padding-right: 5rem
-    width: 100%
-    .title
-      font-size: $font-size-title
-      font-weight: bold
-      max-width: 65%
-      margin-bottom: 3rem
-  .img-fondo
-    position: absolute
-    bottom: -100px
-    left: 0
-    width: 100%
-    height: auto
-    z-index: 1
 
-.home-service
-  border-radius: 100px
-  overflow: hidden
-  height: $service-item-size
-  width: $service-item-size
-  display: flex
-  justify-content: center
-  align-items: center
-  position: absolute
-  z-index: 10
-  transition: all $transition-time linear
-  &:hover
-    width: $service-item-size*1.5
-    height: $service-item-size*1.5
-  .home-service-overlay
+.home-container
+  width: 100%
+  min-height: 100vh
+  height: auto
+  position: relative
+  .home-video
     width: inherit
     height: inherit
-    background: #fff
-    opacity: 1
+    padding: 0
+    margin: 0
+    video
+      position: fixed
+      top: 0px
+      left: 0px
+      min-width: 100%
+      min-height: 100%
+      width: auto
+      height: auto
+      z-index: -1000
+      overflow: hidden
+  .home-overlay
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,0.2)
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1
+  .home-content
+    color: #fff
     position: absolute
+    width: 100%
+    height: auto
     z-index: 2
-    top: 0px
-    transition: opacity $transition-time linear
-    &:hover
-      opacity: 0
-.service-1
-  bottom: 100px
-  left: 250px
-.service-2
-  bottom: 135px
-  left: 640px
-.service-3
-  bottom: 300px
-  left: 850px
-.service-4
-  bottom: 300px
-  left: 1070px
-.service-5
-  bottom: 400px
-  left: 1200px
+    top: 0
+    left: 0
+    padding: 5rem
+    .home-info
+      .home-title
+        font-size: 4rem
+        font-weight:900
+        max-width: 60%
+    .home-services
+      .service
+        width: $service-circle-size
+        height: $service-circle-size
+        position: fixed
+        border-radius: 50%
+        overflow: hidden
+        z-index: 4
+        .service-overlay
+          width: 100%
+          height: 100%
+          background: #fff
+          opacity: 1
+      .service-1
+        bottom: 97px
+        right: 803px
+
+      #Capa_1
+        position: fixed
+        bottom: 0px
+        right : 0px
+        width: 1000px
+
+
