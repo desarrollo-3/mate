@@ -17,25 +17,26 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Nosotros</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
+                    <a class="dropdown-item" [routerLink]="['nosotros']">¿Quienes somos?</a>
+                    <a class="dropdown-item" [routerLink]="['contacto']">Contacto</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Servicios</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" [routerLink]="['apaf']">Servicio</a>
+                    <a class="dropdown-item" [routerLink]="['apaf']">Servicio1</a>
+                    <a class="dropdown-item" [routerLink]="['af']">Servicio2</a>
+                    <a class="dropdown-item" [routerLink]="['al']">Servicio3</a>
+                    <a class="dropdown-item" [routerLink]="['aa']">Servicio4</a>
+                    <a class="dropdown-item" [routerLink]="['api']">Servicio5</a>
                 </div>
             </li>
         </ul>
         <ul class="nav nav-home nav-right d-none d-sm-flex">
             <li class="nav-item">
-                <a href="#" class="nav-link nav-btn">
+                <span href="#" class="nav-link nav-btn">
                     <button class="btn btn-outline-light" type="button">Iniciar sesión</button>
-                </a>
+                </span>
             </li>
         </ul>
     </div>

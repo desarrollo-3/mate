@@ -5,11 +5,6 @@ console.log("funciona");
 // Animacion de el header
 totalFrames = 152;
 
-for(var i = 1; i <= totalFrames; i++) {
-    images[i] =  new Image();
-    images[i].src = "./assets/apaf/service2"+pad(i, 3)+".jpg";
-}
-
 gsap.registerPlugin(ScrollTrigger);
 
 $(document).ready(function() {
@@ -25,7 +20,7 @@ $(document).ready(function() {
         ease: "none",
         duration: 5
     });
-    
+
     gsap.to(headerContentBottom, {
         scrollTrigger: {
             start: "4000px top",

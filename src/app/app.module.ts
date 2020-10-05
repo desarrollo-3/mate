@@ -12,6 +12,9 @@ import { Service4Component } from './pages/service4/service4.component';
 import { Service5Component } from './pages/service5/service5.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ContactComponent } from './pages/contact/contact.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     Service3Component,
     Service4Component,
     Service5Component,
-    NavbarComponent
+    NavbarComponent,
+    ContactComponent,
+    AboutUsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

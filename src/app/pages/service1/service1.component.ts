@@ -1,3 +1,5 @@
+// @ts-ignore
+
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
@@ -9,8 +11,8 @@ import { ScrollTrigger } from 'gsap/all';
 })
 export class Service1Component implements OnInit, OnDestroy {
 
-  private headerContentTop = '.header-content-top';
-  private headerContentBottom = '.header-content-bottom';
+  private headerContentTop = '.service-header > .content-top';
+  private headerContentBottom = '.service-header > .content-bottom';
 
   title = 'Asesoría en planeación y análisis financiero';
   excerpt = 'Analizamos y planeamos el comportamiento de la organización (presente y futuro), con metas cuantificables reduciendo su riesgo financiero.';
@@ -24,19 +26,20 @@ export class Service1Component implements OnInit, OnDestroy {
     'Análisis de mercado'
   ];
 
-
-
-
   constructor() { }
 
   ngOnInit(): void {
+    /* for(let i = 3; i <= totalFrames; i++) {
+        images[i] =  new Image();
+        images[i].src = "../../assets/secuencia4/service4" + pad(i, 3)+".jpg";
+    } */
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(this.headerContentTop, {
         scrollTrigger: {
             start: 'top top',
             end: '+=300 top',
             scrub: true,
-            markers: true
+            markers: false
         },
         y: -100,
         opacity: 0,
@@ -47,7 +50,7 @@ export class Service1Component implements OnInit, OnDestroy {
             start: '4000px top',
             end: '+=300 top',
             scrub: true,
-            markers: true
+            markers: false
         },
         y: -100,
         opacity: 1,

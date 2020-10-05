@@ -8,8 +8,8 @@ Visit Emerge Interctive at http://emergeinteractive.com/
 var step = 1; // visible frame
 var targetStep = 1; // frame to animate to
 var images = new Array; // stores all of the frames for quick access
+var totalFrames = 152; // the number of images in the sequence of JPEG files (this could be calculated server-side by scanning the frames folder)
 var scrollPos; // scroll position of the window
-var totalFrames; // the number of images in the sequence of JPEG files (this could be calculated server-side by scanning the frames folder)
 
 window.requestAnimFrame = (function() { // reduce CPU consumption, improve performance and make this possible
     return window.requestAnimationFrame ||
@@ -86,14 +86,3 @@ function pad(number, length) { // pad numbers with leading zeros for JPEG sequen
     while (str.length < length) { str = '0' + str; }
     return str;
 }
-
-
-// Configuraciones de la animacion
-(function() {
-    totalFrames = 152;
-
-    for (var i = 1; i <= totalFrames; i++) {
-        images[i] = new Image();
-        images[i].src = "./assets/apaf/service2" + pad(i, 3) + ".jpg";
-    }
-})();
