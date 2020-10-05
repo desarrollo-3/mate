@@ -27,7 +27,7 @@ export class AboutUsComponent implements OnInit {
             start: '380px top',
             end: '+=100 top',
             scrub: true,
-            markers: true
+            markers: false
         },
         marginRight: 0,
         opacity: 1,
@@ -38,19 +38,9 @@ export class AboutUsComponent implements OnInit {
           start: '380px top',
           end: '+=100 top',
           scrub: true,
-          markers: true
+          markers: false
       },
       marginLeft: 0,
-      opacity: 1,
-      ease: 'none'
-    });
-    gsap.to(this.values, {
-      scrollTrigger: {
-          start: '380px top',
-          end: '+=100 top',
-          scrub: true,
-          markers: true
-      },
       opacity: 1,
       ease: 'none'
     });
