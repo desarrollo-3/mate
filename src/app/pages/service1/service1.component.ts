@@ -1,8 +1,10 @@
-// @ts-ignore
-
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+
+declare var pad: any;
+declare var images: any;
+declare var totalFrames: any;
 
 @Component({
   selector: 'app-service1',
@@ -10,7 +12,6 @@ import { ScrollTrigger } from 'gsap/all';
   styleUrls: ['./service1.component.sass']
 })
 export class Service1Component implements OnInit, OnDestroy {
-
   private headerContentTop = '.service-header > .content-top';
   private headerContentBottom = '.service-header > .content-bottom';
 
@@ -29,10 +30,11 @@ export class Service1Component implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit(): void {
-    /* for(let i = 3; i <= totalFrames; i++) {
-        images[i] =  new Image();
-        images[i].src = "../../assets/secuencia4/service4" + pad(i, 3)+".jpg";
-    } */
+    totalFrames = 152;
+    for(let i = 3; i <= totalFrames; i++) {
+      images[i] =  new Image();
+      images[i].src = "../../assets/secuencia4/service4" + pad(i, 3)+".jpg";
+    }
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(this.headerContentTop, {
         scrollTrigger: {
@@ -59,8 +61,6 @@ export class Service1Component implements OnInit, OnDestroy {
   }
 
   public ngOnDestroy(): void {
-    // Called once, before the instance is destroyed.
-    // Add 'implements OnDestroy' to the class.
     ScrollTrigger.getAll().forEach(ST => ST.disable());
     console.log('Componente destruido');
   }

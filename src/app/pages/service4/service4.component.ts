@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
+declare var pad: any;
+declare var images: any;
+declare var totalFrames: any;
+
 @Component({
   selector: 'app-service4',
   templateUrl: './service4.component.html',
@@ -24,10 +28,11 @@ export class Service4Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    /* for(let i = 3; i <= totalFrames; i++) {
-        images[i] =  new Image();
-        images[i].src = "../../assets/secuencia5/service5" + pad(i, 3)+".jpg";
-    } */
+    totalFrames = 152;
+    for(let i = 3; i <= totalFrames; i++) {
+      images[i] =  new Image();
+      images[i].src = "../../assets/secuencia5/service5" + pad(i, 3)+".jpg";
+    }
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(this.headerContentTop, {
         scrollTrigger: {
